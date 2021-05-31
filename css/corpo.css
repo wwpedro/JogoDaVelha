@@ -3,7 +3,7 @@
     padding: 0;
     min-height: 700px;
     min-width: 100%;
-    background-color: rgb(231, 160, 160);
+    background-color: rgb(122, 106, 165);
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -24,32 +24,32 @@
     
 }
 #espaco1{
-    border-top: 2px solid rgb(231, 160, 160);
-    border-left: 2px solid rgb(231, 160, 160);
+    border-top: 2px solid rgb(122, 106, 165);
+    border-left: 2px solid rgb(122, 106, 165);
 }
 #espaco2{
-    border-top: 2px solid rgb(231, 160, 160);
+    border-top: 2px solid rgb(122, 106, 165);
 }
 #espaco3{
-    border-top: 2px solid rgb(231, 160, 160);
-    border-right: 2px solid rgb(231, 160, 160);
+    border-top: 2px solid rgb(122, 106, 165);
+    border-right: 2px solid rgb(122, 106, 165);
 }
 #espaco4{
-    border-left: 2px solid rgb(231, 160, 160);
+    border-left: 2px solid rgb(122, 106, 165);
 }
 #espaco6{
-    border-right: 2px solid rgb(231, 160, 160);
+    border-right: 2px solid rgb(122, 106, 165);
 }
 #espaco7{
-    border-bottom: 2px solid rgb(231, 160, 160);
-    border-left: 2px solid rgb(231, 160, 160);
+    border-bottom: 2px solid rgb(122, 106, 165);
+    border-left: 2px solid rgb(122, 106, 165);
 }
 #espaco8{
-    border-bottom: 2px solid rgb(231, 160, 160);
+    border-bottom: 2px solid rgb(122, 106, 165);
 }
 #espaco9{
-    border-bottom: 2px solid rgb(231, 160, 160);
-    border-right: 2px solid rgb(231, 160, 160);
+    border-bottom: 2px solid rgb(122, 106, 165);
+    border-right: 2px solid rgb(122, 106, 165);
 }
 
 .espacoJogo{
@@ -68,7 +68,7 @@
     font-size: 20px;
     height: 60px;
     width: 300px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     border-radius: 20px;
     background-color: rgb(241, 212, 212);
     cursor: pointer;
@@ -78,17 +78,17 @@
     font-size: 20px;
     height: 60px;
     width: 300px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     border-radius: 20px;
     background-color: rgb(253, 226, 226);
     cursor: pointer;
     transition: 1s;
 
-    -webkit-box-shadow: 0px 3px 23px 5px rgba(255,130,214,0.48); 
-box-shadow: 0px 3px 23px 5px rgba(255,130,214,0.48);
+    -webkit-box-shadow: 0px 3px 23px 5px rgba(255, 116, 209, 0.877); 
+box-shadow: 0px 3px 23px 5px rgba(241, 89, 191, 0.726);
 }
-.quemComeca{
-    padding-bottom: 10px;
+#quemComeca{
+    padding-bottom: 40px;
 }
 
 

@@ -37,7 +37,7 @@ a{
     position: relative;
     display: inline-block;
     padding: 15px 30px;
-    color:rgb(180, 177, 184);
+    color:rgb(210, 208, 212);
     text-transform: uppercase;
     letter-spacing: 4px;
     text-decoration: none;
@@ -46,10 +46,10 @@ a{
     transition: 0.2s;
 }
 a:hover{
-    color: rgb(64, 41, 65);
-    background: rgb(247, 96, 214);
-    -webkit-box-shadow: 0px 0px 43px 38px rgb(247, 96, 247); 
-    box-shadow: 0px 0px 43px 38px rgb(255, 37, 219);
+    color: rgb(105, 67, 67);
+    background: rgb(255, 230, 250);
+    -webkit-box-shadow: 0px 0px 43px 38px rgb(255, 168, 255); 
+    box-shadow: 0px 0px 43px 38px rgb(255, 194, 245);
     transition-delay: 1s;
 }
 

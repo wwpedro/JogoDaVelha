@@ -1,12 +1,13 @@
-let jogo=[]; //recebe o controle do jogo guarda as posiçoes das jogadas 0ouX
-let tabuleiro=[]; //vai controlar os elementos visuaus onde ta vazio
+let jogo=[];//recebe o controle do jogo guarda as posiçoes das jogadas 0ouX
+let tabuleiro=[];//vai controlar os elementos visuaus onde ta vazio
 //quando clicar faz interação com jogo e ataulaiaa vizualmente no tabuleiro
 let quemJoga=0;//0 joagador, 1 cpu
 let verifica;//verifica o resulatado de uma funçao criada que vai verificar se ouve vencedor ou n;
-let jogando= true; // indica se o jogo ta rolando ou n
-let nivelDificuldade=1;
-let jogadaCpu=1; //indicar a jogada da cpu dependadno do nivel joga em posiçao aleatoria
+let jogando= true;// indica se o jogo ta rolando ou n
+let nivelDificuldade=2;
+let jogadaCpu=1;//indicar a jogada da cpu dependadno do nivel joga em posiçao aleatoria
 let quemComeca=1;//indica se é o jogador ou a cpu
+let jogada=0;
 
 function cpuJoga(){
     if(jogando){
@@ -17,9 +18,164 @@ function cpuJoga(){
                 coluna=Math.round(Math.random()*2);
             }while (jogo[linha][coluna]!="");
             jogo[linha][coluna]="O";
-        }else if(nivelDificuldade==2){
-
         }
+
+        else if(nivelDificuldade==2){
+            //Ataque
+            //jogadas Linha 1
+            if((jogo[0][0]=="O")&&(jogo[0][1]=="O")&&(jogo[0][2]=="")){
+                jogo[0][2]="O";
+            }else if((jogo[0][0]=="O")&&(jogo[0][1]=="")&&(jogo[0][2]=="O")){
+                jogo[0][1]="O";
+            }else if((jogo[0][0]=="")&&(jogo[0][1]=="O")&&(jogo[0][2]=="O")){
+                jogo[0][0]="O";
+            }else //if(else if) ,porém o if vai fcar a baixo
+            //jogadas Linha 2
+            if((jogo[1][0]=="O")&&(jogo[1][1]=="O")&&(jogo[1][2]=="")){
+                jogo[1][2]=="O";
+            }else if((jogo[1][0]=="O")&&(jogo[1][1]=="")&&(jogo[1][2]=="O")){
+                jogo[1][1]="O";
+            }else if((jogo[1][0]=="")&&(jogo[1][1]=="O")&&(jogo[1][2]=="O")){
+                jogo[1][0]="O";
+            }else 
+            //jogadas Linha 3
+            if((jogo[2][0]=="O")&&(jogo[2][1]=="O")&&(jogo[2][2]=="")){
+                jogo[2][2]="O";
+            }else if((jogo[2][0]=="O")&&(jogo[2][1]=="")&&(jogo[2][2]=="O")){
+                jogo[2][1]="O";
+            }else if((jogo[2][0]=="")&&(jogo[2][1]=="O")&&(jogo[2][2]=="O")){
+                jogo[2][0]="O";
+            }else 
+
+            //jogadas Coluna 1
+            if((jogo[0][0]=="O")&&(jogo[1][0]=="O")&&(jogo[2][0]=="")){
+                jogo[2][0]="O";
+            }else if((jogo[0][0]=="O")&&(jogo[1][0]=="")&&(jogo[2][0]=="O")){
+                jogo[1][0]="O";
+            }else if((jogo[0][0]=="")&&(jogo[1][0]=="O")&&(jogo[2][0]=="O")){
+                jogo[0][0]="O";
+            } 
+            //jogadas Coluna 2
+            else if((jogo[0][1]=="O")&&(jogo[1][1]=="O")&&(jogo[2][1]=="")){
+                jogo[2][1]="O";
+            }else if((jogo[0][1]=="O")&&(jogo[1][1]=="")&&(jogo[2][1]=="O")){
+                jogo[1][1]="O";
+            }else if((jogo[0][1]=="")&&(jogo[1][1]=="O")&&(jogo[2][1]=="O")){
+                jogo[0][1]="O";
+            } 
+
+            //jogadas Coluna 3
+            else if((jogo[0][2]=="O")&&(jogo[1][2]=="O")&&(jogo[2][2]=="")){
+                jogo[2][2]="O";
+            }else if((jogo[0][2]=="O")&&(jogo[1][2]=="")&&(jogo[2][2]=="O")){
+                jogo[1][2]="O";
+            }else if((jogo[0][2]=="")&&(jogo[1][2]=="O")&&(jogo[2][2]=="O")){
+                jogo[0][2]="O";
+            }
+
+            //jogadas Diagonal 1
+            else if((jogo[2][0]=="O")&&(jogo[1][1]=="O")&&(jogo[0][2]=="")){
+                jogo[0][2]="O";
+            }else if((jogo[2][0]=="O")&&(jogo[1][1]=="")&&(jogo[0][2]=="O")){
+                jogo[1][1]="O";
+            }else if((jogo[2][0]=="")&&(jogo[1][1]=="O")&&(jogo[0][2]=="O")){
+                jogo[2][0]="O";
+            }
+            //jogadas Diagonal 2
+            else if((jogo[0][2]=="O")&&(jogo[1][1]=="O")&&(jogo[2][0]=="")){
+                jogo[2][0]="O";
+            }else if((jogo[0][2]=="O")&&(jogo[1][1]=="")&&(jogo[2][0]=="O")){
+                jogo[1][1]="O";
+            }else if((jogo[0][2]=="")&&(jogo[1][1]=="O")&&(jogo[2][0]=="O")){
+                jogo[0][2]="O";
+            }
+
+            //Defesa
+            //jogadas Linha 1
+            else if((jogo[0][0]=="X")&&(jogo[0][1]=="X")&&(jogo[0][2]=="")){
+                jogo[0][2]="O";
+            }else if((jogo[0][0]=="X")&&(jogo[0][1]=="")&&(jogo[0][2]=="X")){
+                jogo[0][1]="O";
+            }else if((jogo[0][0]=="")&&(jogo[0][1]=="X")&&(jogo[0][2]=="X")){
+                jogo[0][0]="O";
+            }else //if , poré o diff vai fcar a baixo
+            //jogadas Linha 2
+            if((jogo[1][0]=="X")&&(jogo[1][1]=="X")&&(jogo[1][2]=="")){
+                jogo[1][2]="O";
+            }else if((jogo[1][0]=="X")&&(jogo[1][1]=="")&&(jogo[1][2]=="X")){
+                jogo[1][1]="O";
+            }else if((jogo[1][0]=="")&&(jogo[1][1]=="X")&&(jogo[1][2]=="X")){
+                jogo[1][0]="O";
+            }else 
+            //jogadas Linha 3
+            if((jogo[2][0]=="X")&&(jogo[2][1]=="X")&&(jogo[2][2]=="")){
+                jogo[2][2]="O";
+            }else if((jogo[2][0]=="X")&&(jogo[2][1]=="")&&(jogo[2][2]=="X")){
+                jogo[2][1]="O";
+            }else if((jogo[2][0]=="")&&(jogo[2][1]=="X")&&(jogo[2][2]=="X")){
+                jogo[2][0]="O";
+            }else 
+
+            //jogadas Coluna 1
+            if((jogo[0][0]=="X")&&(jogo[1][0]=="X")&&(jogo[2][0]=="")){
+                jogo[2][0]="O";
+            }else if((jogo[0][0]=="X")&&(jogo[1][0]=="")&&(jogo[2][0]=="X")){
+                jogo[1][0]="O";
+            }else if((jogo[0][0]=="")&&(jogo[1][0]=="X")&&(jogo[2][0]=="X")){
+                jogo[0][0]="O";
+            } 
+            //jogadas Coluna 2
+            else if((jogo[0][1]=="X")&&(jogo[1][1]=="X")&&(jogo[2][1]=="")){
+                jogo[2][1]="O";
+            }else if((jogo[0][1]=="X")&&(jogo[1][1]=="")&&(jogo[2][1]=="X")){
+                jogo[1][1]="O";
+            }else if((jogo[0][1]=="")&&(jogo[1][1]=="X")&&(jogo[2][1]=="X")){
+                jogo[0][1]="O";
+            } 
+
+            //jogadas Coluna 3
+            else if((jogo[0][2]=="X")&&(jogo[1][2]=="X")&&(jogo[2][2]=="")){
+                jogo[2][2]="O";
+            }else if((jogo[0][2]=="X")&&(jogo[1][2]=="")&&(jogo[2][2]=="X")){
+                jogo[1][2]="O";
+            }else if((jogo[0][2]=="")&&(jogo[1][2]=="X")&&(jogo[2][2]=="X")){
+                jogo[0][2]="O";
+            }
+
+            //jogadas Diagonal 1
+            else if((jogo[2][0]=="X")&&(jogo[1][1]=="X")&&(jogo[0][2]=="")){
+                jogo[0][2]="O";
+            }else if((jogo[2][0]=="X")&&(jogo[1][1]=="")&&(jogo[0][2]=="X")){
+                jogo[1][1]="O";
+            }else if((jogo[2][0]=="")&&(jogo[1][1]=="X")&&(jogo[0][2]=="X")){
+                jogo[2][0]="O";
+            }
+            //jogadas Diagonal 2
+            else if((jogo[0][2]=="X")&&(jogo[1][1]=="X")&&(jogo[2][0]=="")){
+                jogo[2][0]="O";
+            }else if((jogo[0][2]=="X")&&(jogo[1][1]=="")&&(jogo[2][0]=="X")){
+                jogo[1][1]="O";
+            }else if((jogo[0][2]=="")&&(jogo[1][1]=="X")&&(jogo[2][0]=="X")){
+                jogo[0][2]="O";
+            }else{
+                if (jogada<8) {
+                    do{
+                        linha=Math.round(Math.random()*2);
+                        coluna=Math.round(Math.random()*2);
+                    }while (jogo[linha][coluna]!="");
+                    jogo[linha][coluna]="O";
+                }else{
+                    for (let linha = 0; linha < 3; linha++) {
+                        for (let coluna = 0; coluna < 3; coluna++) {
+                            if (jogo[linha][coluna]=="") {
+                                jogo[linha][coluna]=="O";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        jogada++;
         verifica=verificarVitoria();
         if(verifica!=""){
             alert(verifica+" Venceu");
@@ -122,6 +278,7 @@ function jogar(posicao){
                 alert(verifica+" Venceu");
                 jogando=false;
             }
+            jogada++;
             cpuJoga();
         }
         
@@ -151,6 +308,7 @@ function inicia(){
     //função para inicializar a matriz do jogo da velha(inicializar a matriz de joggo)
     jogando=true;//jogo ta rolando
     jogadaCpu=1;//a cpu jogga primeiro
+    jogada=0;
     jogo=[["","",""],
           ["","",""],
           ["","",""]];//inicialização do tabuleiro , zera a matriz
@@ -171,3 +329,47 @@ function inicia(){
     }
 }
 window.addEventListener("load",inicia);
+
+
+
+//jeito errado
+            /*//linha
+            if (jogo[linha][0]==jogo[linha][1]) {
+                jogo[linha][2]="O";
+            }
+            else if (jogo[linha][1]==jogo[linha][2]) {
+                jogo[linha][0]="O";
+            }
+            else if (jogo[linha][0]==jogo[linha][2]) {
+                jogo[linha][1]="O";
+            }
+            //coluna
+            else if (jogo[0][coluna]==jogo[1][coluna]) {
+                jogo[2][coluna]="O";
+            }
+            else if (jogo[1][coluna]==jogo[2][coluna]) {
+                jogo[0][coluna]="O";
+            }
+            else if (jogo[0][coluna]==jogo[2][coluna]) {
+                jogo[1][coluna]="O";
+            }
+            //diagonal
+            else if ((jogo[0][0]==jogo[1][1])) {
+                jogo[2][2]="O";
+            }
+            else if ((jogo[1][1]==jogo[2][2])) {
+                jogo[0][0]="O";
+            }
+            else if ((jogo[0][0]==jogo[2][2])) {
+                jogo[1][1]="O";
+            }
+
+            else if ((jogo[0][2]==jogo[1][1])) {
+                jogo[2][0]="O";
+            }
+            else if ((jogo[1][1]==jogo[2][0])) {
+                jogo[0][2]="O";
+            }
+            else if ((jogo[0][2]==jogo[2][0])) {
+                jogo[1][1]="O";
+            }*/
