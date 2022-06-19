@@ -1,14 +1,24 @@
+@font-face {
+    font-family: 'mexcellentrg';
+    src: url('../fonts/mexcellentrg.otf') format('truetype');
+}
+
 #corpo{
     margin: 0;
     padding: 0;
     min-height: 700px;
     min-width: 100%;
-    background-color: rgb(122, 106, 165);
     justify-content: center;
+    background-color: #050020;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
     
+}
+
+#titulocorpo{
+    font-size: 50px;
 }
 
 #espacos{
@@ -21,35 +31,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
     
 }
 #espaco1{
-    border-top: 2px solid rgb(122, 106, 165);
-    border-left: 2px solid rgb(122, 106, 165);
+    border-top: 2px solid #050020;
+    border-left: 2px solid #050020;
 }
 #espaco2{
-    border-top: 2px solid rgb(122, 106, 165);
+    border-top: 2px solid #050020;
 }
 #espaco3{
-    border-top: 2px solid rgb(122, 106, 165);
-    border-right: 2px solid rgb(122, 106, 165);
+    border-top: 2px solid #050020;
+    border-right: 2px solid #050020;
 }
 #espaco4{
-    border-left: 2px solid rgb(122, 106, 165);
+    border-left: 2px solid #050020;
 }
 #espaco6{
-    border-right: 2px solid rgb(122, 106, 165);
+    border-right: 2px solid #050020;
 }
 #espaco7{
-    border-bottom: 2px solid rgb(122, 106, 165);
-    border-left: 2px solid rgb(122, 106, 165);
+    border-bottom: 2px solid #050020;
+    border-left: 2px solid #050020;
 }
 #espaco8{
-    border-bottom: 2px solid rgb(122, 106, 165);
+    border-bottom: 2px solid #050020;
 }
 #espaco9{
-    border-bottom: 2px solid rgb(122, 106, 165);
-    border-right: 2px solid rgb(122, 106, 165);
+    border-bottom: 2px solid #050020;
+    border-right: 2px solid #050020;
 }
 
 .espacoJogo{
@@ -59,13 +70,16 @@
     margin: 0;
     cursor: pointer;
     display: flex;
-    border: 2px solid black;
+    border: 2px solid white;;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .botaoIniciar{
     border: none;
     font-size: 20px;
+    font-family: 'mexcellentrg';
     height: 60px;
     width: 300px;
     margin-bottom: 10px;
@@ -76,6 +90,7 @@
 .botaoIniciar:hover{
     border: none;
     font-size: 20px;
+    font-family: 'mexcellentrg';
     height: 60px;
     width: 300px;
     margin-bottom: 10px;

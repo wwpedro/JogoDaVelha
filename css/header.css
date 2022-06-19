@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'mexcellentrg';
+    src: url('../fonts/mexcellentrg.otf') format('truetype');
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -5,7 +10,7 @@ body{
     justify-content: center;
     min-height: 100%;
     min-width: 100%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'mexcellentrg';
     flex-direction: column;
 }
 
@@ -14,7 +19,7 @@ header{
     padding: 0;
     min-height: 700px;
     min-width: 100%;
-    background-color: rgb(55, 68, 68);
+    background-color: #190034;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -23,7 +28,8 @@ header{
 #titulo{
     display: flex;
     justify-content: center;
-    color: azure;
+    font-size: 50px;
+    color: white;
 }
 
 
@@ -46,10 +52,9 @@ a{
     transition: 0.2s;
 }
 a:hover{
-    color: rgb(105, 67, 67);
-    background: rgb(255, 230, 250);
-    -webkit-box-shadow: 0px 0px 43px 38px rgb(255, 168, 255); 
-    box-shadow: 0px 0px 43px 38px rgb(255, 194, 245);
+    color: #ffffff;
+    -webkit-box-shadow: 0px 0px 43px 38px rgb(238, 238, 238); 
+    box-shadow: 0px 0px 13px 8px rgb(255, 255, 255);
     transition-delay: 1s;
 }
 
@@ -63,7 +68,7 @@ a span:nth-child(1){
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, rgb(255, 166, 166));
+    background: linear-gradient(90deg, transparent, rgb(255, 255, 255));
 }
 a:hover span:nth-child(1){
     
@@ -76,7 +81,7 @@ a span:nth-child(3){
     right: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg, transparent, rgb(255, 182, 182));
+    background: linear-gradient(270deg, transparent, rgb(255, 255, 255));
 }
 a:hover span:nth-child(3){
     right: 100%;
@@ -89,7 +94,7 @@ a span:nth-child(2){
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg, transparent, rgb(255, 171, 171));
+    background: linear-gradient(180deg, transparent, rgb(255, 255, 255));
 }
 a:hover span:nth-child(2){
     top: 100%;
@@ -102,7 +107,7 @@ a span:nth-child(4){
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(360deg, transparent, rgb(255, 181, 181));
+    background: linear-gradient(360deg, transparent, rgb(255, 255, 255));
 }
 a:hover span:nth-child(4){
     bottom: 100%;
